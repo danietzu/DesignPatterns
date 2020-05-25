@@ -14,6 +14,7 @@
             dataSource.AddObserver(chart);
 
             dataSource.Value = 1;
+            dataSource.Value = 2;
         }
     }
 }

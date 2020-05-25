@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethod", "TemplateM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command", "Command\Command.csproj", "{D7BFB2F7-7ADA-4D8D-AC14-396E347A9CED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{A9410511-C08A-41C7-9467-C436F3C7A7A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "Observer\Observer.csproj", "{A9410511-C08A-41C7-9467-C436F3C7A7A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator (incomplete)", "Mediator\Mediator (incomplete).csproj", "{3293E1A9-66EF-47FA-8DA4-716E038C0818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{E68DE00C-F1E5-4DE7-ABF4-C6EC8424D138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{A9410511-C08A-41C7-9467-C436F3C7A7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9410511-C08A-41C7-9467-C436F3C7A7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9410511-C08A-41C7-9467-C436F3C7A7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3293E1A9-66EF-47FA-8DA4-716E038C0818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3293E1A9-66EF-47FA-8DA4-716E038C0818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3293E1A9-66EF-47FA-8DA4-716E038C0818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3293E1A9-66EF-47FA-8DA4-716E038C0818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68DE00C-F1E5-4DE7-ABF4-C6EC8424D138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68DE00C-F1E5-4DE7-ABF4-C6EC8424D138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68DE00C-F1E5-4DE7-ABF4-C6EC8424D138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68DE00C-F1E5-4DE7-ABF4-C6EC8424D138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

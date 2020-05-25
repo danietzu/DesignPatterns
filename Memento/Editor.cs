@@ -10,10 +10,7 @@ namespace Memento
         public string Content
         {
             get => _content;
-            set
-            {
-                _content = value;
-            }
+            set => _content = value;
         }
 
         public EditorState CreateState()

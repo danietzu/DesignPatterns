@@ -12,10 +12,7 @@ namespace Iterator
             return new ListIterator(this);
         }
 
-        public void Push(T url)
-        {
-            _urls.Add(url);
-        }
+        public void Push(T url) => _urls.Add(url);
 
         public T Pop()
         {
@@ -26,7 +23,7 @@ namespace Iterator
             return lastUrl;
         }
 
-        public class ListIterator : IIterator<T>
+        private class ListIterator : IIterator<T>
         {
             private readonly BrowseHistory<T> _history;
             private int _index;
@@ -36,20 +33,11 @@ namespace Iterator
                 _history = history;
             }
 
-            public T Current()
-            {
-                return _history._urls[_index];
-            }
+            public T Current() => _history._urls[_index];
 
-            public bool HasNext()
-            {
-                return (_index < _history._urls.Count());
-            }
+            public bool HasNext() => (_index < _history._urls.Count());
 
-            public void Next()
-            {
-                _index++;
-            }
+            public void Next() => _index++;
         }
     }
 }

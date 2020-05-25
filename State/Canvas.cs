@@ -6,14 +6,8 @@
 
         public ITool CurrentTool { get => _currentTool; set => _currentTool = value; }
 
-        public void MouseDown()
-        {
-            _currentTool.MouseDown();
-        }
+        public void MouseDown() => _currentTool.MouseDown();
 
-        public void MouseUp()
-        {
-            _currentTool.MouseUp();
-        }
+        public void MouseUp() => _currentTool.MouseUp();
     }
 }
