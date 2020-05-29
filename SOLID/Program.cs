@@ -1,4 +1,4 @@
-﻿using SOLID.OCP;
+﻿using SOLID.LSP.Example2;
 using System;
 
 namespace SOLID
@@ -7,29 +7,27 @@ namespace SOLID
     {
         public static void Main()
         {
-            var apple = new Product("Apple", Color.Green, Size.Small);
-            var kiwi = new Product("Kiwi", Color.Green, Size.Small);
-            var blueberry = new Product("Blueberry", Color.Blue, Size.Small);
-            var tree = new Product("Tree", Color.Green, Size.Large);
-            var house = new Product("House", Color.Blue, Size.Huge);
+            IManager peach = new CEO
+            {
+                FirstName = "Peach"
+            };
+            peach.CalculatePerHourRate(6);
 
-            Product[] products = { apple, kiwi, blueberry, tree, house };
+            IManaged mario = new Manager
+            {
+                FirstName = "Mario"
+            };
+            mario.AssignManager(peach);
+            mario.CalculatePerHourRate(4);
 
-            var filter = new ProductFilter();
+            Employee luigi = new Employee
+            {
+                FirstName = "Luigi"
+            };
+            luigi.AssignManager(mario);
+            luigi.CalculatePerHourRate(2);
 
-            Console.WriteLine("Green products: ");
-            foreach (var product in filter.Filter(products, new ColorSpecification(Color.Green)))
-                Console.WriteLine(" - " + product.Name);
-
-            Console.WriteLine("Small products: ");
-            foreach (var product in filter.Filter(products, new SizeSpecification(Size.Small)))
-                Console.WriteLine(" - " + product.Name);
-
-            Console.WriteLine("Small green products: ");
-            foreach (var product in filter.Filter(products, new AndSpecification<Product>(
-                                                                new SizeSpecification(Size.Small),
-                                                                new ColorSpecification(Color.Green))))
-                Console.WriteLine(" - " + product.Name);
+            Console.WriteLine($"{luigi.FirstName}'s salary is {luigi.Salary}/hour");
         }
     }
 }
